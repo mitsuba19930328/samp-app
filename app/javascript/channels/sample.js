@@ -112,39 +112,49 @@ document.addEventListener('DOMContentLoaded', () => {
     //     helloText.innerText = formText.value;
     // });
 
-    //総まとめ（自己作成）
-    //文字置換アプリを作成
-    //大きなフォームひとつ、小さなフォーム二つを用意
-    //大きなフォームには原文
-    //小さなフォーム1は変更したい文字を入れる。小さなフォーム2には変更後の文字を入れる。
-    //ボタンを押したら原文の変更したい文字が、変更後の文字になって、原文表示されるようにする。
-
-    let textBody = document.getElementById('inputBox');
-    let textBodyValue = document.getElementById('inputBox').value;
-    let beforeText = document.getElementById('beforeText').value;
-    let afterText = document.getElementById('afterText').value;
-    let changeButton = document.getElementById('changeButton');
-
-    // console.log(textBody.value);
-
-
-    //変更ボタンクリックで発火
-    changeButton.addEventListener("click", () => {
-        //テキスト変更処理を行います
-        let afterTextBodyValue = changeText(textBodyValue,beforeText,afterText);
-        //変更されたテキストをテキストエリアに代入
-        textBody.innerText = afterTextBodyValue;
-        console.log(textBody.innerText);
-    });
-
-    //changeTextで該当文字を検索、あればその部分を変更したい文字に置き換え
-    let changeText = (textBodyValue, beforeText, afterText) =>{
-        if(textBodyValue.includes(beforeText)){
-            //textBodyに検索文字列が入っている場合は置換処理を行う
-            let newTextBodyValue = textBodyValue.replaceAll(beforeText, afterText);
-            return newTextBodyValue;
-        }
-    }
+    // //総まとめ（自己作成）
+    // //文字置換アプリを作成
+    // //大きなフォームひとつ、小さなフォーム二つを用意
+    // //大きなフォームには原文
+    // //小さなフォーム1は変更したい文字を入れる。小さなフォーム2には変更後の文字を入れる。
+    // //ボタンを押したら原文の変更したい文字が、変更後の文字になって、原文表示されるようにする。
+    //
+    // //要素準備
+    // let textArea = document.querySelector('#inputBox');
+    // let beforeForm = document.querySelector('#beforeText');
+    // let afterForm = document.querySelector('#afterText');
+    // let changeButton = document.querySelector('#changeButton');
+    //
+    // //変更ボタンクリックで発火
+    // changeButton.addEventListener("click", () => {
+    //     //changeTextに必要な要素準備
+    //     let textAreaText = textArea.value;
+    //     let beforeText = beforeForm.value;
+    //     let afterText = afterForm.value;
+    //
+    //     console.log(textAreaText);
+    //     console.log(beforeText);
+    //     console.log(afterText);
+    //
+    //     //テキスト変更処理を行います
+    //     textAreaText = changeText(textAreaText,beforeText,afterText);
+    //
+    //     //返り値をtextAreaに代入
+    //     textArea.innerText = textAreaText;
+    //
+    //     console.log(textAreaText);
+    //     console.log(beforeText);
+    //     console.log(afterText);
+    //
+    // });
+    //
+    // //changeTextで該当文字を検索、あればその部分を変更したい文字に置き換え
+    // let changeText = (textAreaText, beforeText, afterText) =>{
+    //     //正規表現
+    //     let beforeTextRegexp = new RegExp(beforeText, 'g');
+    //     textAreaText = textAreaText.replaceAll(beforeTextRegexp,afterText);
+    //     return textAreaText;
+    // }
 
 
 
