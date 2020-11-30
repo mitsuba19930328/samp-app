@@ -1,13 +1,17 @@
-<p id='hello'>Hello World</p>
-<div class="form">
-  <p><textarea id='inputBox' style='width: 800px;'><%=@text %></textarea></p>
-  <p>変更したい文字：<input type='text' id='beforeText'></p>
-  <p>変更する文字：<input type='text' id='afterText'></p>
-  <button id='changeButton'>変換！</button>
-</div>
-<div>
-今回の練習用アプリでは、、Javascriptをrailsに組み込むことを学習の第一目標とする。
-ある程度の動きが作れるようになったら、別アプリ（ポートフォリオ用アプリ）を作成
-awsの構築を本を読みながら並行作業で行っていく。（読みながら手を動かす）
-その後、dockerに関しても同様に行っていく。
-</div>
+
+h1 タスク一覧
+
+<%=link_to '新規登録', new_task_path, class:'btn btn-primary' %>
+
+<!--<div class="form">-->
+<!--  <p><textarea id='inputBox' style='width: 800px;'><%#=@text %></textarea></p>-->
+<!--  <p>変更したい文字：<input type='text' id='beforeText'></p>-->
+<!--  <p>変更する文字：<input type='text' id='afterText'></p>-->
+<!--  <button id='changeButton'>変換！</button>-->
+<!--</div>-->
+<!--<div>-->
+<!--今回の練習用アプリでは、、Javascriptをrailsに組み込むことを学習の第一目標とする。-->
+<!--ある程度の動きが作れるようになったら、別アプリ（ポートフォリオ用アプリ）を作成-->
+<!--awsの構築を本を読みながら並行作業で行っていく。（読みながら手を動かす）-->
+<!--その後、dockerに関しても同様に行っていく。-->
+<!--</div>-->
