@@ -6,6 +6,13 @@ class TasksController < ApplicationController
 　明りをさげてゆっくり雪を踏んで来た男は、襟巻で鼻の上まで包み、耳に帽子の毛皮を垂れていた。'
   end
 
+  def create
+    task = Task.new(task_params)
+    task.save!
+    redirect_to tasks_url, notice: "タスク「#{task.name}」を登録しました。"
+
+  end
+
   def show
   end
 
@@ -14,5 +21,10 @@ class TasksController < ApplicationController
   end
 
   def edit
+  end
+
+  private
+  def task_params
+    params.require(:task).permit(:name, :description)
   end
 end

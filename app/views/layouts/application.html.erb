@@ -11,6 +11,11 @@
   <nav class="navbar navbar-expand-lg navbar-light">
   </nav>
     <container>
+      <% if flash.notice.present? %>
+        <div class="alert alert-success">
+          <%= flash.notice %>
+        </div>
+      <% end %>
       <%= yield %>
     </container>
   </body>
