@@ -16,11 +16,11 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(task_params)
-    if task.save
-      redirect_to tasks_url, notice: "タスク「#{task.name}」を登録しました。"
+    @task = Task.new(task_params)
+    if @task.save
+      redirect_to tasks_url, notice: "タスク「#{@task.name}」を登録しました。"
     else
-      render new_task_path, alert: "タスク「#{task.name}」を登録できませんでした。"
+      render new_task_path, alert: "タスク「#{@task.name}」を登録できませんでした。"
     end
   end
 
